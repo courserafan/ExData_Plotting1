@@ -1,7 +1,7 @@
 ### Assume that the data has been downloaded and unzipped in the current
 ### folder 
 powerData <-
-  read.table("./data/household_power_consumption.txt", sep=";",
+  read.table("./household_power_consumption.txt", sep=";",
              header=TRUE,
              na.strings = "?")
 ### clean and transform data columns to appropriate classes
