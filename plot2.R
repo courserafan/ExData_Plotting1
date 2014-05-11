@@ -26,6 +26,8 @@ endDate <- as.POSIXct("2007-02-03")
 ### Finally subset the data to the required time period
 powerData <- subset(powerData, Date >= startDate & Date < endDate)
 
+png("figure/plot2.png")
 with(powerData,
      plot(Date, Global_active_power, type='l',
           ylab="Global Active Power (kilowatts)"))
+dev.off()
