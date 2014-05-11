@@ -1,5 +1,5 @@
-### Make sure that the data directory exists and has the data
-stopifnot(file.exists("./data/household_power_consumption.txt"))
+### Assume that the data has been downloaded and unzipped in the current
+### folder 
 powerData <-
   read.table("./data/household_power_consumption.txt", sep=";",
              header=TRUE,
@@ -35,5 +35,5 @@ hist(powerData$Global_active_power,
      ylab = "Fequency",
      main = "Global Active Power",
      col='red')
-
+dev.off()
 ### End
