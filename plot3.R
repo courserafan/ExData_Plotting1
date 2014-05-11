@@ -27,14 +27,17 @@ endDate <- as.POSIXct("2007-02-03")
 powerData <- subset(powerData, Date >= startDate & Date < endDate)
 
 png("figure/plot3.png")
-with(powerData,{
-  plot(Date, Sub_metering_1, col='black', xlab="",
-       ylab="Energy sub metering", type='l')
-  lines(Date,Sub_metering_2, col='red', type='l')
-  lines(Date,Sub_metering_3, col='blue', type='l')
-  legend("topright", legend=c("Sub_metering_1", "Sub_metering_2",
-                         "Sub_metering_3"),
-         lty = c(1,1,1),
-         col = c("black", "red", "blue"))
-})
+with(powerData,
+     {
+       plot(Date, Sub_metering_1, col='black', xlab="",
+            ylab="Energy sub metering", type='l'
+            )
+       lines(Date,Sub_metering_2, col='red', type='l')
+       lines(Date,Sub_metering_3, col='blue', type='l')
+       legend("topright", legend=c("Sub_metering_1", "Sub_metering_2",
+                              "Sub_metering_3"),
+              lty = c(1,1,1),
+              col = c("black", "red", "blue")
+              )
+     })
 dev.off()
